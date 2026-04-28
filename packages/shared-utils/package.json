@@ -1,0 +1,24 @@
+{
+  "name": "@vaga/shared-utils",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@vaga/shared-types": "*",
+    "jsonwebtoken": "^9.0.2",
+    "bcrypt": "^6.0.0",
+    "pg": "^8.11.5",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/bcrypt": "^5.0.2",
+    "@types/pg": "^8.11.6",
+    "@types/uuid": "^9.0.8",
+    "@types/node": "^20.14.0",
+    "typescript": "^5.4.5"
+  }
+}

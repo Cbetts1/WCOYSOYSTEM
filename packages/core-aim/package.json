@@ -1,0 +1,15 @@
+{
+  "name": "@vaga/core-aim",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": { "build": "tsc" },
+  "dependencies": {
+    "@vaga/shared-types": "*",
+    "@vaga/shared-utils": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.4.5"
+  }
+}
