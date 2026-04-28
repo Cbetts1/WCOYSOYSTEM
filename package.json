@@ -1,0 +1,21 @@
+{
+  "name": "wcoysoystem",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "dev:api": "npm run dev --workspace=apps/backend-api",
+    "dev:worker": "npm run dev --workspace=apps/worker-arrow",
+    "dev:user": "npm run dev --workspace=apps/frontend-user",
+    "dev:admin": "npm run dev --workspace=apps/frontend-admin",
+    "migrate": "node infra/scripts/migrate.js",
+    "seed": "node infra/scripts/seed.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}
