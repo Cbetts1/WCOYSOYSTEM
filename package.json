@@ -1,5 +1,5 @@
 {
-  "name": "wcoysoystem",
+  "name": "vaga-aios-monorepo",
   "version": "1.0.0",
   "private": true,
   "workspaces": [
@@ -17,5 +17,8 @@
   },
   "devDependencies": {
     "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "express-rate-limit": "^8.4.1"
   }
 }

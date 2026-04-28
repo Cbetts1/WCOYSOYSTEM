@@ -3,22 +3,12 @@
 // Seeds an admin user and demo data.
 
 const { Pool } = require('pg');
-const crypto = require('crypto');
+const bcrypt = require('bcrypt');
 
 const pool = new Pool({ connectionString: process.env.DATABASE_URL });
 
-// Simple bcrypt-like hash using SHA-256 + salt (for seed only; real auth uses bcrypt)
-// Actually we'll use bcrypt via requiring it if available, else fallback
 async function hashPassword(password) {
-  try {
-    const bcrypt = require('bcrypt');
-    return bcrypt.hash(password, 12);
-  } catch {
-    // fallback: deterministic but not secure — only for seed demo
-    const salt = crypto.randomBytes(16).toString('hex');
-    const hash = crypto.createHmac('sha256', salt).update(password).digest('hex');
-    return `$sha256$${salt}$${hash}`;
-  }
+  return bcrypt.hash(password, 12);
 }
 
 async function main() {
